@@ -17,7 +17,7 @@ router.get('/:id/replies', getPostReplies);
 router.post('/', createPost); 
 router.delete('/:id', deletePost); 
 router.patch('/:id/like', addLike);
-router.patch('/:id/unlike', removeLike);
+router.patch('/:id/unlike', removeLike); 
 
 
 export default router;
