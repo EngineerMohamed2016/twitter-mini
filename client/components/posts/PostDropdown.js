@@ -29,7 +29,7 @@ const PostDropdown = ({ post }) => {
         if (success) {
             setShowDrop(false);
             if (pathname.includes('bookmarks'))
-                deleteBookmarkPost(_id);
+               return deleteBookmarkPost(_id);
             router.push('/home');
         }
 
