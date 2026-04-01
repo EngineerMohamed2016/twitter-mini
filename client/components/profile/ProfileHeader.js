@@ -4,10 +4,10 @@ import Link from 'next/link';
 import ProfileActions from './ProfileActions';
 
 const ProfileHeader = ({ user }) => {
-    const { displayName, username, bio, followersCount, followingCount, birthDate } = user;
+    const { displayName, username, bio, followersCount, followingCount, createdAt } = user;
 
     const formatDate = () => {
-        const date = new Date(birthDate);
+        const date = new Date(createdAt);
         const formatted = date.toLocaleString("en-US", {
             month: "long",
             year: "numeric"
