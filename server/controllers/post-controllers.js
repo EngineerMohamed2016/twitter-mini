@@ -187,7 +187,9 @@ const getRecommendedPosts = async (req, res) => {
     }).sort((post1, post2) => post2.likesCount - post1.likesCount)
 
 
-    posts.length = 2;
-    res.status(httpStatusCodes.OK).json({ success: true, posts });
+
+  if (posts.length > 2)
+        posts.length = 2;
+  res.status(httpStatusCodes.OK).json({ success: true, posts });
 }
 export { getAllPosts, getPost, getPostReplies, createPost, deletePost, addLike, removeLike, getUserPosts, getUserReplies, getUserLikes, getRecommendedPosts }
